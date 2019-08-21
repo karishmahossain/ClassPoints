@@ -6,27 +6,25 @@ var mongoose = require('mongoose');
 
 // define the schema for our user model
 var tripSchema = mongoose.Schema({
-
+    rank: {
+        type: String,
+        min: [1, 'Rank must be a positive integer'],
+        required: [false, 'Please enter a method of transport']
+    },
     name: {
         type: String,
         min: [1, 'Too few characters'],
         max: 100,
-        required: [true, 'Please enter a username.']
+        required: [true, 'Please enter a name.']
     },
-    destination: {
+    points: {
         type: String,
-        min: [1, 'Please enter an address with at least 1 character'],
-        required: [true, 'Please enter an address']
+        min: [1, 'Please enter a point value'],
+        required: [true, 'Please enter a point value']
     },
-    methodOfTransport: {
-        type: String,
-        min: [1, 'Your method of transport must be one of the choices provided'],
-        required: [false, 'Please enter a method of transport']
-    },
-    arrivalDate: {
-        type: String,
-        min: [1, 'Please enter an arrival date with at least 1 character'],
-        required: [true, 'Please enter an arrival date']
+    qrcode: {
+        type: Buffer,
+        required: [false, 'QR Code must be generated']
     },
     UserId: {
         type: String
