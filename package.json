@@ -21,7 +21,7 @@
     "css-loader": "^0.28.4",
     "file-loader": "^0.11.2",
     "font-awesome": "^4.6.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "sinon": "^2.3.2",
     "sinon-mongoose": "^2.0.2",
     "style-loader": "^0.18.2",
